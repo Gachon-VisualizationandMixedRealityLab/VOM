@@ -1,0 +1,20 @@
+#주의사항
+1. 셀이 비워져 있는데 page내에서 줄이 더 생긴다면, '삭제'를 이용해서 한 번 더 지워주어야 함.
+
+=member.csv=
+degree : vs/gs/us (이부분 명칭은 바뀔수있음)
+name : 이름
+email : 이메일
+RA : 연구분야
+imagelink : assets/images 에 사진 넣고 경로입력 (assets/images/member_name.jpg)
+
+=research.csv=
+field : 4가지 대분류
+title
+imagelink : assets/images 에 사진 넣고 경로입력 (assets/images/research_name.jpg)
+text : 설명하는 Text. (엔터넣고 싶은 곳에 <br>)
+
+
+=publications.csv=
+field : 3가지 분류 (1-International Journals / 2-International Conferences / 3-Books)
+title : publication (주의사항 : 끝에 공백이 있어서는 안됨)

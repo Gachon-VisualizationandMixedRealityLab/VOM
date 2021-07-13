@@ -2,7 +2,7 @@ function loaded() {
     let ul_list; //ul_list선언
 
     //데이터 CSV 불러오기
-    const fileName = "assets/csv/gallery.csv";
+    const fileName = "/[repo]/assets/csv/gallery.csv";
 
     $.ajax({
         url: fileName,

@@ -502,6 +502,14 @@ footer .inner-content p a {
 	margin-bottom: 20px;
 }
 
+.team-member .down-content span p {
+	display:inline;
+	font-size: 14px;
+	color:#1a6692;
+	font-weight: 410;
+	margin-bottom: 0px;
+}
+
 .team-member .down-content p {
 	display: block;
 	font-size: 14px;

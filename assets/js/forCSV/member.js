@@ -30,6 +30,9 @@ function loaded() {
                     //데이터 받아오기!!
                     const name = textArr[num][1];
                     const email = textArr[num][2];
+                    const email1 = email.slice(0, 3);
+                    const email2 = email.slice(3, );
+
                     const research_area = textArr[num][3];
                     const imagelink = textArr[num][4];
 
@@ -55,7 +58,7 @@ function loaded() {
 
                                         <div class="down-content">
                                             <h4>${name}</h4>
-                                            <span>${email}</span>
+                                            <span><p>${email1}</p><p>${email2}</p></span>
                                             <p>research area : <br> ${research_area}</p>
                                         </div>
                                     </div>`)

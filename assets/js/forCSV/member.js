@@ -40,12 +40,24 @@ function loaded() {
                         case "vs":
                             ul_list = $("#vs");
                             break;
+
                         case "gs":
                             ul_list = $("#gs");
                             break;
+
+                        case "bm":
+                            ul_list = $("#bm");
+                            break;
+
                         case "us":
                             ul_list = $("#us");
-                            break;                            
+                            break;
+
+                        case "al":
+                            ul_list = $("#al");
+                            break; 
+                            
+
                         default:
                             break;
                     }

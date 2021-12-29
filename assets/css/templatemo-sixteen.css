@@ -216,7 +216,7 @@ header .navbar {
 
 .banner-item-01 {
 	padding: 300px 0px;
-	background-image: url(../images/main/slide_01.jpg);
+	background-image: url(../images/main/1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -224,7 +224,25 @@ header .navbar {
 
 .banner-item-02 {
 	padding: 300px 0px;
-	background-image: url(../images/main/slide_02.jpg);
+	background-image: url(../images/main/2.PNG);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.banner-item-03 {
+	padding: 300px 0px;
+	background-image: url(../images/main/3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.banner-item-04 {
+	padding: 300px 0px;
+	background-image: url(../images/main/4.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;

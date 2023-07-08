@@ -23,19 +23,31 @@ function loaded() {
 
             //한 줄씩 정보를 넣어줍니당~
             for (var num = 0; num < rowArr.length; num++) {
-                category = null;
-                content = null;
+                full_text = CSVtoArray(rowArr[num]);
 
-                if(rowArr[num][2] == "\""){
-                    category = rowArr[num][0];
-                    content = rowArr[num].slice(3,-2);
-                    content = content.replace(/\"\"/gi, "\"")
-                }
-                else{
-                    textArr[num] = CSVtoArray(rowArr[num]);
-                    category = textArr[num][0];
-                    content = textArr[num].slice(1,);
-                }
+                category = full_text[0];
+                content = full_text[2];
+                imagelink = full_text[1];
+                console.log(category);
+
+                // if(rowArr[num][3] == "\""){
+                //     category = rowArr[num][0];
+                //     imagelink = rowArr[num][1];
+                //     content = rowArr[num][2].slice(3,-2);
+                //     content = content.replace(/\"\"/gi, "\"")
+                // }
+                // else{
+                //     textArr[num] = CSVtoArray(rowArr[num]);
+                //     category = textArr[num][0];
+                //     imagelink = rowArr[num][1];
+                //     content = textArr[num][2].slice(1,);
+                // }
+
+                // console.log(rowArr[num][0]);
+                // console.log(rowArr[num][1]);
+                // console.log(rowArr[num][2]);
+                // console.log(rowArr[num][3]);
+
 
                 if (category !== undefined && num > 0) {
                     //데이터 받아오기!!
@@ -52,9 +64,23 @@ function loaded() {
                     }
 
                                       //여기다가 html 짜서 넣는거구나
-                    ul_list.append(`<li>${content}</li>`)
-                    
-                }
+                    ul_list.append(`<div class="row">
+                                    <div class="row research_box">
+                                        <div class="col-md-2">
+                                        <img style="max-width: 100%;" src="assets/images/grant/${imagelink}" alt="">
+                                        </div>
+                                        <div class="col-md-10">
+                                        <p>
+                                        ${content}
+                                        </p>
+                                        </div>
+                                        <br><br><br><br><br>
+                                    </div>
+                        
+                                    
+                                    </div>
+                                </div>`)               
+                            }
             }
         }
     });

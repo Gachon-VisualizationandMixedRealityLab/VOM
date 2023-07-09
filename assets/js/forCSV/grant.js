@@ -65,17 +65,17 @@ function loaded() {
 
                                       //여기다가 html 짜서 넣는거구나
                     ul_list.append(`<div class="row">
-                                    <div class="row research_box">
-                                        <div class="col-md-2">
-                                        <img style="max-width: 100%;" src="assets/images/grant/${imagelink}" alt="">
+                                        <div class="row research_box">
+                                            <div class="col-2">
+                                            <img style="max-width: 100%;" src="assets/images/grant/${imagelink}" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                            <p>
+                                            ${content}
+                                            </p>
+                                            </div>
+                                            <br><br><br><br><br>
                                         </div>
-                                        <div class="col-md-10">
-                                        <p>
-                                        ${content}
-                                        </p>
-                                        </div>
-                                        <br><br><br><br><br>
-                                    </div>
                         
                                     
                                     </div>

@@ -16,8 +16,11 @@ degree | name | email | RA | imagelink
 ---- | ---- | ---- | ---- | ----
 vs/gs/us | name | email | research area | file name
 
+* rf - Research Professor
+* phd - Graduate Students (Ph.D)
+* ms - Graduate Students (M.S)
 * vs - Visiting Scholar
-* gs - Graduate Students (Master)
+* bm - Graduate Students (bachelor-master)
 * us - Undergraduate Students
 * image의 경우 assets/images/member 에 사진을 넣고, imagelink칸에 확장자를 포함한 이름 입력 (member_name.jpg)
 
@@ -67,3 +70,10 @@ field | title | imagelink
 * field 부분에는 1을 채워주세요
 * title 부분에 학회나 프로그램 이름을 적어주세요.
 * image의 경우 assets/images/gallery 에 사진을 넣고, imagelink칸에 확장자를 포함한 이름 입력 (gallery_name.jpg)
+
+
+### main banner
+
+* 배너 이미지 추가를 위해서는 images/main 폴더에 이미지 추가 후
+  index.html에서   div class="banner header-text" 부분을 찾아 추가한 뒤에
+  templatemo-sixteen.css 파일에서 .banner-item 부분을 찾아 추가해주세요

@@ -256,6 +256,14 @@ header .navbar {
 	background-position: center center;
 }
 
+.banner-item-06 {
+	padding: 300px 0px;
+	background-image: url(../images/main/5.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
 .banner .banner-item {
 	max-height: 600px;
 }

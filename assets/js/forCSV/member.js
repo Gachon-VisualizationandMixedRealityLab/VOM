@@ -41,8 +41,16 @@ function loaded() {
                             ul_list = $("#vs");
                             break;
 
-                        case "gs":
-                            ul_list = $("#gs");
+                        case "rf":
+                            ul_list = $("#rf");
+                            break;
+
+                        case "phd":
+                            ul_list = $("#phd");
+                            break;
+
+                        case "ms":
+                            ul_list = $("#ms");
                             break;
 
                         case "bm":

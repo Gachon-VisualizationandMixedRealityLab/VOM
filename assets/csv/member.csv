@@ -1,13 +1,16 @@
 degree,name,email,RA,imagelink
 vs,Hoijoon Jung from The University of Sydney,hjun6058@uni.sydney.edu.au,Mixed Reality,member_hj.jpg
-al,Jihu Kim,paransky9577@gmail.com,Deep Learning,member_kjh.jpg
-gs,Sungmin Lee,yugioh0326@gmail.com,"Visualization, Deep Learning",member_sm.jpg
-gs,Myungji Song,qqqgina@gachon.ac.kr,Mixed Reality,member_mj.jpg
-gs,Suhyeon Kim,kih629@gachon.ac.kr,"Mixed Reality, Deep Learning",member_sh.jpg
-gs,Haill An,xenotic@gachon.ac.kr,"Visualization, Deep Learning",member_hi.png
-bm,Jaejun Park,3636qq@gachon.ac.kr,Mixed Reality,member_jj.jpg
-bm,Junseo Choi,chjwest01@gmail.com,TBD,member_js.jpg
+phd,Syed Ale Hassan Shah Nawaz,alehassan1000@gmail.com,Deep Learning,member_Hassan.png
+phd,Zainab Ghazanfar,zainabghazanfar848@gmail.com,Deep Learning,member_Zainab.jpg
 us,Hyeonseung Kang,khs010429@gachon.ac.kr,TBD,member_hs.jpg
 us,Hoeun Choo,hoeun8793@gachon.ac.kr,TBD,member_he.jpg
 us,Hyeonji Kim,hjkim1770@gmail.com,TBD,member_khj.jpg
 us,Yejin Kim,vvvsfhk@naver.com,TBD,member_yj.jpg
+ms,Suhyeon Kim,kih629@gachon.ac.kr,"Mixed Reality, Deep Learning",member_sh.jpg
+ms,Haill An,xenotic@gachon.ac.kr,"Visualization, Deep Learning",member_hi.png
+ms,Jaejun Park,3636qq@gachon.ac.kr,Mixed Reality,member_jj.png
+bm,Junseo Choi,chjwest01@gmail.com,"Visualization, Deep Learning",member_js.jpg
+al,Jihu Kim,paransky9577@gmail.com,Deep Learning,member_kjh.jpg
+al,Sungmin Lee,yugioh0326@gmail.com,"Visualization, Deep Learning",member_sm.jpg
+al,Myungji Song,qqqgina@gachon.ac.kr,Mixed Reality,member_mj.jpg
+rf,,,,iwt.png

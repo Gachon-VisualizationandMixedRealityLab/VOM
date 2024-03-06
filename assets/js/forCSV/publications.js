@@ -20,12 +20,16 @@ function loaded() {
             const rowArr = allData.split('\n');
             const textArr = new Array(rowArr.length);
 
+            //console.log(rowARr); 
 
+            index = 0;
+            Journalsindex = 0;
+            Conferencesindex = 0;
+            Booksindex = 0;
             //한 줄씩 정보를 넣어줍니당~
             for (var num = 0; num < rowArr.length; num++) {
                 category = null;
                 content = null;
-
                 if(rowArr[num][2] == "\""){
                     category = rowArr[num][0];
                     content = rowArr[num].slice(3,-2);
@@ -43,19 +47,38 @@ function loaded() {
                     switch (category) {
                         case "1":
                             ul_list = $("#Journals");
+                            Journalsindex += 1;
+                            index = Journalsindex;
                             break;
                         case "2":
                             ul_list = $("#Conferences");
+                            Conferencesindex += 1;
+                            index = Conferencesindex;
                             break;
                         case "3":
                             ul_list = $("#Books");
+                            Booksindex += 1;
+                            index = Booksindex;
                             break;                                                        
                         default:
                             break;
                     }
-
                                       //여기다가 html 짜서 넣는거구나
-                    ul_list.append(`<li>${content}</li>`)
+                    //ul_list.append(`<li>${content}</li>`)
+
+                    author = null;
+                    title = null;
+                    publication = null;
+
+                    content = content.split('"');
+                    author = content[0];
+                    title = index + ". "  + content[1];
+                    publication = content[2];
+
+                    ul_list.append(`<h5 style="margin-bottom: 20px;">${title}</h5>`,
+                                    `${author}`,
+                                    `<br>${publication}</br>`,
+                                    '<br></br>')
                     
                 }
             }

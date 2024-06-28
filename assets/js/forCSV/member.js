@@ -34,6 +34,23 @@ function loaded() {
                     const email2 = email.slice(3, );
 
                     const research_area = textArr[num][3];
+
+                    // Alumni에서 취직한 사람 정보 입력
+                    function formatResearchArea(researchArea) {
+                        return researchArea.split(', ').map(section => {
+                            if (section.includes('Employed at')) {
+                                const parts = section.split(' (');
+                                const employmentParts = parts[1].split(' : ');
+                                const label = employmentParts[0];
+                                const value = employmentParts[1].replace(')', '');
+                                return `${parts[0]}<br><br><strong>${label}</strong> : ${value}`;
+                            }
+                            return section;
+                        }).join(', ');
+                    }                    
+                    const formattedResearchArea = formatResearchArea(research_area);
+
+
                     const imagelink = textArr[num][4];
 
                     switch (textArr[num][0]) {
@@ -70,20 +87,32 @@ function loaded() {
                             break;
                     }
 
-                  //여기다가 html 짜서 넣는거구나
-                    ul_list.append(`<div class="team-member">
-                                        <div class="thumb-container">
-                                            <img src="assets/images/member/${imagelink}" alt="">
-                                        </div>
+                // HTML 짜서 넣는 포맷
+                    // ul_list.append(`<div class="team-member">
+                    //                     <div class="thumb-container">
+                    //                         <img src="assets/images/member/${imagelink}" alt="">
+                    //                     </div>
 
-                                        <div class="down-content">
-                                            <h4>${name}</h4>
-                                            <span><p>${email1}</p><p>${email2}</p></span>
-                                            <p>research area : <br> ${research_area}</p>
-                                        </div>
-                                    </div>`)
-                    
-                }
+                    //                     <div class="down-content">
+                    //                         <h4>${name}</h4>
+                    //                         <span><p>${email1}</p><p>${email2}</p></span>
+                    //                         <p>research area : <br> ${research_area}</p>
+                    //                     </div>
+                    //                 </div>`)
+
+                        ul_list.append(`<div class="team-member">
+                            <div class="thumb-container">
+                                <img src="assets/images/member/${imagelink}" alt="">
+                            </div>
+
+                            <div class="down-content">
+                                <h4>${name}</h4>
+                                <span><p>${email1}</p><p>${email2}</p></span>
+                                <p>research area : <br> ${formattedResearchArea}</p>
+                            </div>
+                        </div>`)
+
+                                }
             }
         }
     });

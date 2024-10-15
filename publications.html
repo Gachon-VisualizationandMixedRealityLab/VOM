@@ -11,7 +11,7 @@
   <meta http-equiv="Expires" content="-1">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
-  
+
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
     rel="stylesheet">
 
@@ -25,6 +25,83 @@
   <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
   <link rel="stylesheet" href="assets/css/owl.css">
 
+  <!-- Custom CSS to manage tab visibility -->
+  <style>
+    .pro,
+    .stu,
+    .books {
+      display: none;
+      /* 기본적으로 모든 탭 내용을 숨김 */
+    }
+
+    .pro.active,
+    .stu.active,
+    .books.active {
+      display: block;
+      /* 활성화된 탭만 표시 */
+    }
+
+    .filters ul li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+    }
+
+    .filters ul li.active {
+      background-color: #ddd;
+    }
+
+    .filter-list {
+      display: flex;
+      /* Flexbox 사용 */
+      justify-content: space-between;
+      /* 항목 사이의 공간을 균등하게 */
+      list-style-type: none;
+      /* 기본 목록 스타일 제거 */
+      padding: 0;
+    }
+
+    .filter-list li {
+      flex: 1;
+      /* 각 항목을 동일한 비율로 나눔 */
+      text-align: center;
+      /* 가운데 정렬 */
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      /* 글씨색 전환 효과 */
+      outline: none;
+      /* 버튼의 아웃라인 제거 */
+      color: #000;
+      /* 기본 글씨 색 검정 */
+    }
+
+    .filter-list li:last-child {
+      margin-right: 0;
+      /* 마지막 항목에 마진 제거 */
+    }
+
+    .filter-list li:hover {
+      color: #2C3E50;
+      /* 마우스 오버 시 글씨 색 변경 (짙은 남색) */
+    }
+
+    .filter-list li.active {
+      color: #2C3E50;
+      /* 활성화된 탭 글씨 색 (짙은 남색) */
+      font-weight: bold;
+      /* 글씨 굵게 */
+    }
+
+    .filter-list li:focus {
+      outline: none;
+      /* 포커스 시 아웃라인 제거 */
+    }
+  </style>
 </head>
 
 <body onload="loaded();">
@@ -69,68 +146,71 @@
         </div>
       </div>
     </nav>
-    
   </header>
 
-
+  <!-- Publications Section -->
   <div class="publications">
     <div class="publications heading">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Publications</h1>
+        <div class="col-md-12">
+          <h1>Publications</h1>
+          <div class="line"></div>
+          <div class="filters">
+            <ul class="filter-list">
+              <li class="pro active" onclick="showTab('pro')">International Journals</li>
+              <li class="stu" onclick="showTab('stu')">International Conferences</li>
+              <li class="books" onclick="showTab('books')">Books</li>
+            </ul>
           </div>
-        </div>
-        <div class="line"></div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 header">
-          <h1>International Journals</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <ol id="Journals">
-          </ol>
-        </div>
-      </div>
+          <div class="content">
 
-    </div>
+            <div class="col-md-12 pro active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 header">
+                    <h1>International Journals</h1>
+                    <ol id="Journals">
+                      <!-- 여기에 International Journals 목록을 추가 -->
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 header">
-          <h1>International Conferences</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <ol id="Conferences">
-          </ol>
-        </div>
-      </div>
+            <div class="col-md-12 stu">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 header">
+                    <h1>International Conferences</h1>
+                    <ol id="Conferences">
+                      <!-- 여기에 International Conferences 목록을 추가 -->
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    </div>
+            <div class="col-md-12 books">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 header">
+                    <h1>Books</h1>
+                    <ol id="Books">
+                      <!-- 여기에 Books 목록을 추가 -->
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 header">
-          <h1>Books</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <ol id="Books">
-          </ol>
         </div>
       </div>
-
     </div>
   </div>
+
 
 
   <!-- footer -->
@@ -139,10 +219,13 @@
       <div class="row">
         <div class="col-md-12">
           <div class="inner-content">
-            <p>&copy; 2023 Visualization of Mixed Reality Laboratory 
-              <br> School of Computing, Gachon University, 1342 Seongnamdaero, Sujeonggu, Seongnam, Gyeonggido 13120, Republic of Korea, Korea 
-              <br>Tel. (+82) 31-750-4771</p>
-            </div>
+            <p>&copy; 2023 Visualization of Mixed Reality Laboratory
+              <br> School of Computing, Gachon University, 1342 Seongnamdaero, Sujeonggu, Seongnam, Gyeonggido
+              13120,
+              Republic of Korea, Korea
+              <br>Tel. (+82) 31-750-4771
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -162,17 +245,56 @@
   <script src="assets/js/accordions.js"></script>
   <script src="assets/js/forCSV/publications.js"></script>
 
-
   <script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) { //declaring the array outside of the
-      if (!cleared[t.id]) { // function makes it static and global
-        cleared[t.id] = 1; // you could use true and false, but that's more typing
-        t.value = ''; // with more chance of typos
+    // clearField 함수는 그대로 둡니다.
+    cleared[0] = cleared[1] = cleared[2] = 0; // set a cleared flag for each field
+
+    function clearField(t) {
+      if (!cleared[t.id]) {
+        cleared[t.id] = 1;
+        t.value = ''; // 필드 초기화 로직
         t.style.color = '#fff';
       }
     }
   </script>
+
+  <script>
+    // 탭 전환 함수
+    function showTab(tab) {
+      // 모든 탭에서 active 클래스를 제거
+      document.querySelectorAll('.filters ul li').forEach(function (el) {
+        el.classList.remove('active');
+      });
+
+      // 클릭한 탭에 active 클래스 추가
+      document.querySelector('.filters ul li.' + tab).classList.add('active');
+
+      // 모든 콘텐츠 숨기기
+      document.querySelectorAll('.content > div').forEach(function (el) {
+        el.style.display = 'none';
+        el.classList.remove('active');
+      });
+
+      // 선택된 콘텐츠만 표시
+      var selectedContent = document.querySelector('.content .' + tab);
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+        selectedContent.classList.add('active');
+      }
+    }
+
+    // 페이지 로드 후 데이터 로드 및 탭 전환 설정
+    window.onload = function () {
+      // 먼저 publications.js에서 데이터를 로드하고
+      loaded();  // loaded 함수는 publications.js에서 데이터를 로드
+
+      // 데이터가 로드된 후에 탭 전환을 설정
+      setTimeout(function () {
+        showTab('pro'); // 첫 번째 탭을 기본으로 표시
+      }, 1000); // 데이터를 로드하는 데 시간이 필요할 수 있으므로 1초 지연
+    };
+  </script>
+
 
 
 </body>

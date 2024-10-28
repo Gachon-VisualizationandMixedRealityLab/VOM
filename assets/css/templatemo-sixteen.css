@@ -250,13 +250,21 @@ header .navbar {
 
 .banner-item-05 {
 	padding: 300px 0px;
-	background-image: url(../images/main/slide_01.jpg);
+	background-image: url(../images/main/11.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .banner-item-06 {
+	padding: 300px 0px;
+	background-image: url(../images/main/slide_01.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.banner-item-07 {
 	padding: 300px 0px;
 	background-image: url(../images/main/5.png);
 	background-size: contain;

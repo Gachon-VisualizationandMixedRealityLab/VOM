@@ -26,8 +26,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
 
 
-  <!-- Custom CSS to manage tab visibility -->
-
+  <!-- Custom CSS to manage tab visibility and pagination -->
   <style>
     .tab_1,
     .tab_2,
@@ -103,6 +102,50 @@
       outline: none;
       /* 포커스 시 아웃라인 제거 */
     }
+    
+    /* 페이지네이션 스타일 */
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    
+    .pagination {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .page-item {
+      margin: 0 5px;
+    }
+    
+    .page-link {
+      display: block;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .page-item.active .page-link {
+      background-color: #2C3E50;
+      color: white;
+      border-color: #2C3E50;
+    }
+    
+    .page-item.disabled .page-link {
+      color: #aaa;
+      pointer-events: none;
+      cursor: default;
+    }
+    
+    .page-link:hover {
+      background-color: #f5f5f5;
+    }
   </style>
 
 
@@ -173,48 +216,61 @@
 
               <div class="col-md-12 tab_1 active">
                 <div class="container">
-                    <div class="col-md-12">
-                      <div class="big-section-heading">
-                        <h1>Visualization & Mixed Reality</h1>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="research_1" class="subcontent">
-                  </div>
-                </div>
-
-                <div class="col-md-12 tab_2">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="big-section-heading">
-                          <h1>Image Process & Machine Learning</h1>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="research_2" class="subcontent">
+                  <div class="col-md-12">
+                    <div class="big-section-heading">
+                      <h1>Visualization & Mixed Reality</h1>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-md-12 tab_3">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="big-section-heading">
-                          <h1>Domain Applications</h1>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="research_3" class="subcontent">
-                  </div>
+                <div id="research_1" class="subcontent">
+                  <!-- 컨텐츠가 여기에 로드됩니다 -->
+                </div>
+                <!-- 페이지네이션 컨트롤 추가 -->
+                <div id="pagination_1" class="pagination-container">
+                  <!-- 페이지네이션이 여기에 로드됩니다 -->
                 </div>
               </div>
 
+              <div class="col-md-12 tab_2">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="big-section-heading">
+                        <h1>Image Process & Machine Learning</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="research_2" class="subcontent">
+                  <!-- 컨텐츠가 여기에 로드됩니다 -->
+                </div>
+                <!-- 페이지네이션 컨트롤 추가 -->
+                <div id="pagination_2" class="pagination-container">
+                  <!-- 페이지네이션이 여기에 로드됩니다 -->
+                </div>
+              </div>
+
+              <div class="col-md-12 tab_3">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="big-section-heading">
+                        <h1>Domain Applications</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="research_3" class="subcontent">
+                  <!-- 컨텐츠가 여기에 로드됩니다 -->
+                </div>
+                <!-- 페이지네이션 컨트롤 추가 -->
+                <div id="pagination_3" class="pagination-container">
+                  <!-- 페이지네이션이 여기에 로드됩니다 -->
+                </div>
+              </div>
             </div>
 
-
+          </div>
         </div>
       </div>
     </div>
@@ -267,8 +323,8 @@
   <script>
     // 탭 전환 함수
     function showTab(tab) {
-    // 모든 탭에서 active 클래스 제거
-    document.querySelectorAll('.filters ul li').forEach(function(el) {
+      // 모든 탭에서 active 클래스 제거
+      document.querySelectorAll('.filters ul li').forEach(function(el) {
         el.classList.remove('active');
       });
 
@@ -286,8 +342,8 @@
 
     // 페이지 로드 후 데이터 로드 및 탭 전환 설정
     window.onload = function () {
-      // 먼저 publications.js에서 데이터를 로드하고
-      loaded();  // loaded 함수는 publications.js에서 데이터를 로드
+      // 먼저 research.js에서 데이터를 로드
+      loaded();
 
       // 데이터가 로드된 후에 탭 전환을 설정
       setTimeout(function () {

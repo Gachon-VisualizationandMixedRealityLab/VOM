@@ -140,22 +140,24 @@ jQuery( document ).ready(function( $ ) {
         });
 
         $('.filters ul li').click(function(){
-        $('.filters ul li').removeClass('active');
-        $('.content div').removeClass('ele');
-        $(this).addClass('active');
-
-        if ($(this).hasClass('pro')) {
-            $('.content .stu').addClass('ele');
-        }
-        else {
-            $('.content .pro').addClass('ele');
-        }
-          
-          
-          var data = $(this).attr('data-filter');
-          $grid.isotope({
-            filter: data
-          })
+            // 모든 필터에서 활성 클래스 제거
+            $('.filters ul li').removeClass('active');
+            // 클릭한 필터에 활성 클래스 추가
+            $(this).addClass('active');
+            
+            // 모든 컨텐츠 숨기기
+            $('.content .pro, .content .stu, .content .podoc').hide();
+            
+            // 클릭한 필터에 해당하는 컨텐츠만 표시
+            if ($(this).hasClass('pro')) {
+                $('.content .pro').show();
+            } else if ($(this).hasClass('stu')) {
+                $('.content .stu').show();
+            } else if ($(this).hasClass('podoc')) {
+                $('.content .podoc').show();
+            }
+            
+            return false;
         });
 
         var $grid = $(".grid").isotope({

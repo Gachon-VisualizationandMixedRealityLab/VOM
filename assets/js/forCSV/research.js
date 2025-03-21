@@ -14,12 +14,16 @@ function loaded() {
         "3": 1
     };
 
-    // 데이터 CSV 불러오기
+    // 데이터 CSV 불러오기 - 인코딩 옵션 추가
     const fileName = "./assets/csv/research.csv";
 
     $.ajax({
         url: fileName,
         dataType: 'text',
+        // 명시적으로 UTF-8 인코딩을 사용하도록 설정
+        beforeSend: function(xhr) {
+            xhr.overrideMimeType("text/csv; charset=UTF-8");
+        },
         success: function (data) {
             const allRow = data;
             let allData = "";
@@ -38,10 +42,20 @@ function loaded() {
                 if (textArr[num][0] !== undefined && num > 0) {
                     // 데이터 받아오기
                     const category = textArr[num][0];
-                    const title = textArr[num][1];
-                    const imagelink = textArr[num][2];
-                    const text = textArr[num][3];
-
+                    const title = textArr[num][1] || "";
+                    const imagelink = textArr[num][2] || "";
+                    
+                    // 텍스트 인코딩 수정 - HTML 엔티티 변환 및 특수 문자 처리
+                    let text = textArr[num][3] || "";
+                    
+                    // 깨진 따옴표 문자 수정
+                    text = text.replace(/��/g, "'");
+                    text = text.replace(/��/g, '"');
+                    text = text.replace(/\ufffd/g, "'"); // 대체 문자 수정
+                    
+                    // HTML 엔티티로 변환
+                    text = $("<div/>").text(text).html();
+                    
                     // 카테고리별 데이터 저장
                     if (category === "1" || category === "2" || category === "3") {
                         researchData[category].push({
@@ -101,6 +115,38 @@ function renderTabContent(tabId, data, page, itemsPerPage) {
     renderPagination(tabId, data.length, page, itemsPerPage);
 }
 
+// CSVtoArray 함수 개선 - 인코딩 문제 처리
+function CSVtoArray(text) {
+    if (!text) return [];
+    
+    var re_valid = /^\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*(?:,\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*)*$/;
+    var re_value = /(?!\s*$)\s*(?:'([^'\\]*(?:\\[\S\s][^'\\]*)*)'|"([^"\\]*(?:\\[\S\s][^"\\]*)*)"|([^,'"\s\\]*(?:\s+[^,'"\s\\]+)*))\s*(?:,|$)/g;
+    
+    var a = []; // Initialize array to receive values.
+    
+    text.replace(re_value, function (m0, m1, m2, m3) {
+        // Remove backslash from \' in single quoted values.
+        if (m1 !== undefined) {
+            let value = m1.replace(/\\'/g, "'");
+            a.push(value);
+        }
+        // Remove backslash from \" in double quoted values.
+        else if (m2 !== undefined) {
+            let value = m2.replace(/\\"/g, '"');
+            a.push(value);
+        }
+        else if (m3 !== undefined) {
+            a.push(m3);
+        }
+        return ''; // Return empty string.
+    });
+    
+    // Handle special case of empty last value.
+    if (/,\s*$/.test(text)) a.push('');
+    
+    return a;
+}
+
 // 페이지네이션 컨트롤 렌더링 함수
 function renderPagination(tabId, totalItems, currentPage, itemsPerPage) {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -134,7 +180,7 @@ function renderPagination(tabId, totalItems, currentPage, itemsPerPage) {
     paginationContainer.html(paginationHtml);
 }
 
-// 페이지네이션 이벤트 설정 함수
+// 페이지네이션 이벤트 설정 함수 - 이벤트 버블링 방지 추가
 function setupPaginationEvents(data, itemsPerPage, currentPage) {
     // 기존 이벤트 핸들러 제거 후 다시 등록
     $(document).off('click', '.page-link').on('click', '.page-link', function(e) {
@@ -153,27 +199,5 @@ function setupPaginationEvents(data, itemsPerPage, currentPage) {
         // 현재 페이지 업데이트 및 컨텐츠 다시 렌더링
         currentPage[tabId] = page;
         renderTabContent(tabId, data[tabId], page, itemsPerPage);
-        
-        console.log(`Tab ${tabId}: 페이지 ${page}로 이동`); // 디버깅용
     });
-}
-
-function CSVtoArray(text) {
-    var re_valid = /^\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*(?:,\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*)*$/;
-    var re_value = /(?!\s*$)\s*(?:'([^'\\]*(?:\\[\S\s][^'\\]*)*)'|"([^"\\]*(?:\\[\S\s][^"\\]*)*)"|([^,'"\s\\]*(?:\s+[^,'"\s\\]+)*))\s*(?:,|$)/g;
-    //Return NULL if input string is not well formed CSV string.
-    //if (!re_valid.test(text)) return null;
-    var a = []; //Initialize array to receive values.
-    text.replace(re_value, //"Walk" the string using replace with callback.
-        function (m0, m1, m2, m3) {
-            //Remove backslash from \' in single quoted values.
-            if (m1 !== undefined) a.push(m1.replace(/\\'/g, "'"));
-            //Remove backslash from \" in double quoted values.
-            else if (m2 !== undefined) a.push(m2.replace(/\\"/g, '"'));
-            else if (m3 !== undefined) a.push(m3);
-            return ''; //Return empty string.
-        });
-    //Handle special case of empty last value.
-    if (/,\s*$/.test(text)) a.push('');
-    return a;
 }

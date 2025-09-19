@@ -1,13 +1,13 @@
 degree,name,email,RA,imagelink
 bm,Yejin Kim,vvvsfhk@gachon.ac.kr,TBD,member_yj.jpg
-phd,Suhyeon Kim,kih629@gachon.ac.kr,"Mixed Reality, Deep Learning",member_sh.jpg
-phd,Haill An,xenotic@gachon.ac.kr,"Visualization, Deep Learning",member_hi.png
-phd,Zainab Ghazanfar,zainabghazanfar848@gmail.com,Deep Learning,member_Zainab.jpg
-phd,ULLAH FAIZ,faizullah@gachon.ac.kr,Deep Learning,member_Faiz.jpg
-ms,Jaejun Park,3636qq@gachon.ac.kr,Mixed Reality,member_jj.png
-bm,Jiyun Kang,jiyun1215@gachon.ac.kr,TBD,member_jy.jpg
-bm,Junseo Choi,wnstl1234@gachon.ac.kr,"Visualization, Deep Learning",member_js.jpg
-bm,Donghyuk Choo,choodh105@gachon.ac.kr,TBD,member_dh.jpg
+phd,Suhyeon Kim,kih629@gachon.ac.kr,"Mixed Reality, Mesh Reconstruction",member_sh.jpg
+phd,Haill An,xenotic@gachon.ac.kr,"Visualization, Implicit Neural Representation",member_hi.png
+phd,Zainab Ghazanfar,zainabghazanfar848@gmail.com,"Medical Image Processing, CNN+Transfomer",member_Zainab.jpg
+phd,ULLAH FAIZ,faizullah@gachon.ac.kr,"Medical Image Processing, Diffusion",member_Faiz.jpg
+ms,Jaejun Park,3636qq@gachon.ac.kr,"Mixed Reality, Gaussian Splatting",member_jj.png
+bm,Jiyun Kang,jiyun1215@gachon.ac.kr,"Visualization, Foundation Model + Diffusion",member_jy.jpg
+bm,Junseo Choi,wnstl1234@gachon.ac.kr,"Visualization, Gaussian Splatting",member_js.jpg
+bm,Donghyuk Choo,choodh105@gachon.ac.kr,"Visualization, Neural Radiance Field",member_dh.jpg
 al,Sungmin Lee,smlee@radisentech.com,"Visualization, Deep Learning (Junior Researcher, RadiSen)",member_sm.jpg
 al,Myungji Song,qqqgina@gachon.ac.kr,"Mixed Reality (Software Engineering, SKIA)",member_mj.jpg
 rf,Jawad Khan,jkhanbk1@gachon.ac.kr,Text Mining,member_Jawad Khan.png

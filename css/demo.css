@@ -1,0 +1,204 @@
+/* =========================================
+   VOM Lab - Demo Page Styles
+   ========================================= */
+
+/* 상단 여백(padding-top)을 20px로 설정하여 
+   헤더 텍스트와 비디오 목록 사이의 간격을 줄였습니다.
+*/
+.demo-section {
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+/* Grid Layout */
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 기본 2열 */
+    gap: 40px;
+}
+
+/* Demo Card */
+.demo-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: demoFadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animation delay for each card */
+.demo-card:nth-child(1) { animation-delay: 0.1s; }
+.demo-card:nth-child(2) { animation-delay: 0.2s; }
+.demo-card:nth-child(3) { animation-delay: 0.3s; }
+.demo-card:nth-child(4) { animation-delay: 0.4s; }
+.demo-card:nth-child(5) { animation-delay: 0.5s; }
+.demo-card:nth-child(6) { animation-delay: 0.6s; }
+.demo-card:nth-child(7) { animation-delay: 0.7s; }
+.demo-card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes demoFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.demo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: transparent;
+}
+
+/* =========================================
+   Video Wrapper & Facade Pattern
+   (로딩 속도 개선을 위한 썸네일/재생버튼 스타일)
+   ========================================= */
+
+/* 16:9 비율 유지 컨테이너 */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background-color: #000;
+    cursor: pointer; /* 클릭 가능하다는 표시 */
+    overflow: hidden;
+}
+
+/* 클릭 후 로드될 진짜 iframe */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    z-index: 10; /* 썸네일보다 위에 뜨도록 설정 */
+}
+
+/* 썸네일 이미지 컨테이너 */
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 영역 꽉 채우기 */
+    opacity: 0.85; /* 재생 버튼이 잘 보이도록 살짝 어둡게 */
+    transition: opacity 0.3s;
+}
+
+/* 마우스 올리면 이미지가 밝아짐 */
+.video-wrapper:hover .video-placeholder img {
+    opacity: 1;
+}
+
+/* 가짜 재생 버튼 (유튜브 스타일) */
+.play-btn {
+    position: absolute;
+    width: 68px;
+    height: 48px;
+    background-color: rgba(33, 33, 33, 0.8);
+    border-radius: 12px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+/* 마우스 올리면 버튼이 유튜브 빨간색(#f00)으로 변함 */
+.video-wrapper:hover .play-btn {
+    background-color: #f00;
+}
+
+/* 재생 버튼의 삼각형 아이콘 */
+.play-btn::before {
+    content: "";
+    border-style: solid;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent #fff;
+}
+
+/* =========================================
+   Card Text Content
+   ========================================= */
+
+.demo-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.demo-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1; /* 내용을 채우면서 버튼 영역을 하단으로 밀어냄 */
+}
+
+/* Paper Link Button */
+.demo-link-wrap {
+    margin-top: auto;
+    text-align: right;
+}
+
+.paper-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.paper-link:hover {
+    border-bottom-color: var(--accent-color);
+    opacity: 0.8;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 900px) {
+    .demo-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .demo-grid {
+        grid-template-columns: 1fr; /* 모바일에서는 1열 */
+        gap: 40px;
+    }
+    
+    .demo-title {
+        font-size: 1.15rem;
+    }
+}

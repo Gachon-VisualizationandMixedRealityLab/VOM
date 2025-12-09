@@ -1,0 +1,448 @@
+/* =========================================
+   VOM Lab - Members Page Styles
+   ========================================= */
+
+/* =========================================
+   0. Tab Navigation
+   ========================================= */
+.member-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.tab-btn:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.tab-btn.active {
+    color: #fff;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   1. Principal Investigator Section
+   ========================================= */
+.pi-section {
+    padding: 60px 0 100px;
+}
+
+.pi-card {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.pi-image {
+    flex: 0 0 300px;
+}
+
+.pi-photo {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.pi-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.pi-info { 
+    flex: 1; 
+    padding-top: 10px; 
+}
+
+.pi-role {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.pi-name { 
+    font-size: 2.2rem; 
+    font-weight: 700; 
+    margin-bottom: 20px; 
+}
+
+.pi-bio { 
+    color: var(--text-secondary); 
+    margin-bottom: 30px; 
+    font-weight: 300; 
+    line-height: 1.8;
+}
+
+.contact-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon { 
+    width: 24px; 
+    text-align: center; 
+    color: var(--accent-color); 
+    font-size: 1rem;
+}
+
+.contact-list a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.contact-list a:hover {
+    color: var(--text-primary);
+}
+
+/* =========================================
+   2. Current Members Section
+   ========================================= */
+.team-section {
+    padding: 60px 0;
+}
+
+.team-section.no-bottom-padding {
+    padding-bottom: 20px;
+}
+
+/* Alumni section with gray background */
+.alumni-wrapper {
+    background-color: var(--light-bg);
+    padding: 40px 0 100px;
+}
+
+.alumni-wrapper .section-label {
+    margin-bottom: 30px;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.member-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: transparent;
+}
+
+.member-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #f0f0f0;
+    object-fit: cover;
+    background-size: cover;
+    background-position: top center;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.member-info { 
+    padding: 20px; 
+}
+
+.member-name { 
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    margin-bottom: 4px; 
+}
+
+.member-role { 
+    font-size: 0.85rem; 
+    color: var(--accent-color); 
+    margin-bottom: 8px; 
+}
+
+.member-interest { 
+    font-size: 0.8rem; 
+    color: var(--text-secondary); 
+    line-height: 1.4; 
+}
+
+/* =========================================
+   3. Alumni Section
+   ========================================= */
+.alumni-section { 
+    padding: 100px 0;
+    background-color: var(--light-bg);
+}
+
+.alumni-section-inner {
+    padding-top: 0;
+    padding-bottom: 80px;
+}
+
+.alumni-section-inner:last-child {
+    padding-bottom: 0;
+}
+
+.alumni-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 20px;
+}
+
+.alumni-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.alumni-name { 
+    font-weight: 600; 
+}
+
+.alumni-year { 
+    color: var(--text-secondary); 
+    font-size: 0.9rem; 
+}
+
+.alumni-current { 
+    color: var(--accent-color); 
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+/* =========================================
+   4. Professor Details (in Professor Tab)
+   ========================================= */
+.professor-details {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.detail-block {
+    margin-bottom: 40px;
+}
+
+.detail-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.detail-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.detail-sub {
+    margin-top: 6px;
+    margin-left: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Detail Block - 소개 문장 스타일 */
+.detail-intro {
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background-color: var(--light-bg);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* =========================================
+   5. Simple Alumni List (Bachelor)
+   ========================================= */
+.alumni-list.simple {
+    display: block;
+    columns: 2;
+    column-gap: 40px;
+}
+
+.alumni-item-simple {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    break-inside: avoid;
+}
+
+/* =========================================
+   6. Responsive
+   ========================================= */
+@media (max-width: 1024px) {
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .member-tabs {
+        gap: 8px;
+    }
+    
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .pi-card { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+    
+    .pi-image { 
+        width: 100%; 
+        max-width: 300px; 
+        margin: 0 auto;
+        flex: none;
+    }
+    
+    .pi-photo { 
+        height: 300px; 
+    }
+    
+    .pi-info { 
+        text-align: center; 
+    }
+    
+    .contact-list li { 
+        justify-content: center; 
+    }
+    
+    .members-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+    
+    .alumni-list { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .alumni-list.simple {
+        columns: 1;
+    }
+    
+    .alumni-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .alumni-current {
+        text-align: left;
+    }
+    
+    .team-section,
+    .alumni-section {
+        padding: 60px 0;
+    }
+    
+    .professor-details {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+    
+    .detail-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .members-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .pi-name {
+        font-size: 1.8rem;
+    }
+}

@@ -1,16 +1,15 @@
-degree,name,email,RA,imagelink
-bm,Yejin Kim,vvvsfhk@gachon.ac.kr,"Mixed Reality, Gaussian Splatting",member_yj.jpg
-phd,Suhyeon Kim,kih629@gachon.ac.kr,"Mixed Reality, Mesh Reconstruction",member_sh.jpg
-phd,Haill An,xenotic@gachon.ac.kr,"Visualization, Implicit Neural Representation",member_hi.png
-phd,Zainab Ghazanfar,zainabghazanfar848@gmail.com,"Medical Image Processing, CNN+Transfomer",member_Zainab.jpg
-phd,ULLAH FAIZ,faizullah@gachon.ac.kr,"Medical Image Processing, Diffusion",member_Faiz.jpg
-ms,Jaejun Park,3636qq@gachon.ac.kr,"Visualization, Gaussian Splatting",member_jj.png
-bm,Jiyun Kang,jiyun1215@gachon.ac.kr,"Visualization, Foundation Model + Diffusion",member_jy.jpg
-bm,Junseo Choi,wnstl1234@gachon.ac.kr,"Mesh Reconstruction, Gaussian Splatting",member_js.jpg
-bm,Donghyuk Choo,choodh105@gachon.ac.kr,"Visualization, Neural Radiance Field",member_dh.jpg
-al,Sungmin Lee,smlee@purple-ai.co,"Visualization, Deep Learning (Senior Research Engineer, Purple-AI)",member_sm.jpg
-al,Myungji Song,qqqgina@gachon.ac.kr,"Mixed Reality (Software Engineering, SKIA)",member_mj.jpg
-rf,Jawad Khan,jkhanbk1@gachon.ac.kr,Text Mining,member_Jawad Khan.png
-vs,Nasir Raham,nrahim3797@gmail.com,"Computer Vision (Postdoctoral Research Fellow, University of Michigan)",member_Nasir.jpg
-vs,Hoijoon Jung from The University of Sydney,hjun6058@uni.sydney.edu.au,Mixed Reality,member_hj.jpg
-us,,,TBD,iwt.png
+degree,name,email,RA,imagelink,company
+bm,Yejin Kim,vvvsfhk@gachon.ac.kr,"Mixed Reality, Gaussian Splatting",member_yj.jpg,
+phd,Suhyeon Kim,kih629@gachon.ac.kr,"Mixed Reality, Mesh Reconstruction",member_sh.jpg,
+phd,Haill An,xenotic@gachon.ac.kr,"Visualization, Implicit Neural Representation",member_hi.png,
+phd,Zainab Ghazanfar,zainabghazanfar848@gmail.com,"Medical Image Processing, CNN+Transfomer",member_Zainab.jpg,
+phd,Ullah Faiz,faizullah@gachon.ac.kr,"Medical Image Processing, Diffusion",member_Faiz.jpg,
+ms,Jaejun Park,3636qq@gachon.ac.kr,"Visualization, Gaussian Splatting",member_jj.png,
+bm,Jiyun Kang,jiyun1215@gachon.ac.kr,"Visualization, Foundation Model + Diffusion",member_jy.jpg,
+bm,Junseo Choi,wnstl1234@gachon.ac.kr,"Mesh Reconstruction, Gaussian Splatting",member_js.jpg,
+bm,Donghyuk Choo,choodh105@gachon.ac.kr,"Visualization, Neural Radiance Field",member_dh.jpg,
+al,Sungmin Lee,smlee@purple-ai.co,"Visualization, Deep Learning",member_sm.jpg,Purple-AI (Senior Research Engineer)
+al,Myungji Song,qqqgina@gachon.ac.kr,Mixed Reality,member_mj.jpg,SKIA (XR Specialist)
+rf,Jawad Khan,jkhanbk1@gachon.ac.kr,Text Mining,member_Jawad Khan.png,
+vs,Nasir Raham,nrahim3797@gmail.com,Computer Vision,member_Nasir.jpg,"Postdoctoral Research Fellow, University of Michigan"
+vs,Hoijoon Jung from The University of Sydney,hjun6058@uni.sydney.edu.au,Mixed Reality,member_hj.jpg,

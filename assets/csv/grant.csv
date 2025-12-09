@@ -1,30 +1,30 @@
-﻿field,Images,title
-1,nextep.png,"StorySync: Real-time Interactive AI Media Fasade Content Generation, Nextep, 2025.11 - 2026.02 "
-1,nrf.jpeg,"BRIDGE 3.0: Beyond Research Innovation and Development for Good Enterprises 3.0 (대학 창의적 자산 실용화 지원 사업), National Research Foundation of Korea, 2025.10 - 2025.12"
-1,nia.jpg,"Data Quality Verification for Large-scale AI Training, National Information Society Agency, 2025.07.01 - 2025.12.31"
-1,nrf.jpeg,"A Development of Clinical Decision Supporting Algorithm Using Artificial Inteligence Model for the Surgical Treatment in Patients with Cervical Myelopathy, Consolidator Grant (중견연구), National Research Foundation of Korea, 2025.04.01 - 2029.03.31. "
-1,nrf.jpeg,"Research of NeRF · GS Algorithm for Volumetric Medical Image Reconstruction and Physical Surface Reconstruction in Surgical Environment and Validation in Augmented Surgical Visualization, Outstanding Young Scientist Grant (우수신진연구), National Research Foundation of Korea, 2025.03.01 - 2028.02.28. "
-1,hive.png,"Development of A 3D Welding Reconstruction and Measrument Soloution Using Shadow Metric System, Hive Vision, 2024.04.01 - 2024.12.31. "
-1,astron.png,"Development of Human Motion Recognition Algorithm for Hemiplegic Stroke Patients, Astron, 2023.08.01 - 2023.12.31."
-1,gachon.jpg,"Development of A Lesion Segmentation Algorithm for Transcatheter Aortic Valve Replacement, Outstanding Research Grant (우수연구과제), Gachon University, 2023.05.15 - 2024.05.14.  "
-1,kocca.jpg,"Cultural Technology Specialist Training and Project for Metaverse and Game, Korea Creative Content Agency, 2023.04.01 - 2025.12.31.  "
-1,devine.png,"Development of an Automatic Ground Truth Data Generation Program for Autonomous Driving Artificial Intelligence Training, Devine Technology, 2022.11.14 - 2023.02.28."
-1,khidi.png,"Development of Medical Twin Technology for Transcatheter Aortic Valve Replacement in Severe Aortic Valve Stenosis based on Real World Data, Korea Health Industry Development Institute, 2022.07.01 - 2026.12.31. "
-1,nrf.jpeg,"Development and Application of Empathy Story-Virtual Reality for Resolving Ethical Dilemmas in the Post-human Era: Focusing on Sports Violence, National Research Foundation of Korea, Humanities and Social Sciences Collaborative Research Support Grant (일반공동연구지원사업), 2022.07.01 - 2025.06.30.  "
-1,nrf.jpeg,"Research and Validation for Patient · Discipline Specific Medical Image Processing, Visualization, and Mixed Reality Algorithms for Clinical Multidisciplinary Team Meeting, National Research Foundation of Korea, General Grant (기본연구), 2021.06.01 - 2024.02.28.  "
-1,gmeditec.jpeg,"Development of A Surgical Navigation System Using 3D Slicer, GMeditec, 2021.06.16 - 2022.01.31.  "
-1,nrf.jpeg,"Automatic Transfer Function Generation for Direct Volume Rendering using Knowledge Database and Contents-based Retrieval, National Research Foundation of Korea, Starting Grant (생애첫연구), 2020.09.01 - 2021.08.31. "
-2,uos.png,"Professor Emeritus. Dagan Feng,   School of Computer Science, The University of Sydney, Australia.  "
-2,rpa.jpg,"Professor Michael Fulham, Department of Molecular Imaging, Royal Prince Alfred, Department of Molecular Imaging, Royal Prince Alfred, Australia.  "
-2,uos.png,"Professor Jinman Kim,  School of Computer Science, The University of Sydney, Australia.  "
-2,shanghai_jiaotong.png,"Associate Professor Lei Bi, Institute of Translational Medicine, Shanghai Jiao Tong University, China.  "
-2,jamescook.jpg,"Euijoon Ahn, College of Science and Engineering, James Cook University, Australia.  "
-2,shanghai_jiaotong.png,"Associate Professor, Bin Sheng, Department of Computer Science and Engineering, Shanghai Jiao Tong University, China.  "
-2,hongkongpolytech.png,"Assistant Professor, Li Ping, Department of Computing, The Hong Kong Polytechnic University, Hong Kong.  "
-2,gilmedi.png,"Professor Seon-Tae Kim, Department of Otolaryngology-Head and Neck Surgery, College of Medicine, Gachon University, Gil Medical Center, Korea.  "
-2,gilmedi.png,"Professor Eun Young Kim, Department of Radiology, College of Medicine, Gachon University, Gil Medical Center, Korea.  "
-2,gilmedi.png,"Associate Professor Seong Son, Department of Neurosurgery, College of Medicine, Gachon University, Gil Medical Center, Korea.  "
-2,mokponationaluniv.png,"Assistant Professor Sang-wan Jeon, Department of Physical Education, Mokpo National University, Korea.  "
-2,seokyeong.jpg,"Professor Al Chan Kim,. Department of Sports and Technology, Seo Kyeong University, Korea.  "
-2,kuah.png,"Assistant Professor Jiwon Park, Department of Orthopaedic Surgery, Korea University Ansan Hospital, Korea."
-2,tu.png,"Dr Zeyang Zhou, School of Mechanical Engineering, Tianjin University, China."
+﻿field,Images,title,period,institution ,Tag
+1,nextep.png,StorySync: Real-time Interactive AI Media Fasade Content Generation,2025.11 - 2026.02 ,Nextep,
+1,nrf.jpeg,BRIDGE 3.0: Beyond Research Innovation and Development for Good Enterprises 3.0 ,2025.10 - 2025.12,National Research Foundation of Korea,대학 창의적 자산 실용화 지원 사업
+1,nia.jpg,Data Quality Verification for Large-scale AI Training,2025.07 - 2025.12,National Information Society Agency,
+1,nrf.jpeg,A Development of Clinical Decision Supporting Algorithm Using Artificial Inteligence Model for the Surgical Treatment in Patients with Cervical Myelopathy,2025.04 - 2029.03,National Research Foundation of Korea,Consolidator Grant (중견연구)
+1,nrf.jpeg,Research of NeRF · GS Algorithm for Volumetric Medical Image Reconstruction and Physical Surface Reconstruction in Surgical Environment and Validation in Augmented Surgical Visualization,2025.03 - 2028.02,National Research Foundation of Korea,Outstanding Young Scientist Grant (우수신진연구)
+2,hive.png,Development of A 3D Welding Reconstruction and Measrument Soloution Using Shadow Metric System,2024.04 - 2024.12,Hive Vision,
+2,astron.png,Development of Human Motion Recognition Algorithm for Hemiplegic Stroke Patients,2023.08 - 2023.12,Astron,
+2,gachon.jpg,Development of A Lesion Segmentation Algorithm for Transcatheter Aortic Valve Replacement,2023.05 - 2024.05,Gachon University,Outstanding Research Grant (우수연구과제)
+1,kocca.jpg,Cultural Technology Specialist Training and Project for Metaverse and Game,2023.04 - 2025.12,Korea Creative Content Agency,
+2,devine.png,Development of an Automatic Ground Truth Data Generation Program for Autonomous Driving Artificial Intelligence Training,2022.11 - 2023.02,Devine Technology,
+1,khidi.png,Development of Medical Twin Technology for Transcatheter Aortic Valve Replacement in Severe Aortic Valve Stenosis based on Real World Data,2022.07 - 2026.12,Korea Health Industry Development Institute,
+2,nrf.jpeg,Development and Application of Empathy Story-Virtual Reality for Resolving Ethical Dilemmas in the Post-human Era: Focusing on Sports Violence,2022.07 - 2025.06,National Research Foundation of Korea,Humanities and Social Sciences Collaborative Research Support Grant (일반공동연구지원사업)
+2,nrf.jpeg,"Research and Validation for Patient · Discipline Specific Medical Image Processing, Visualization, and Mixed Reality Algorithms for Clinical Multidisciplinary Team Meeting",2021.06 - 2024.02,National Research Foundation of Korea,General Grant (기본연구)
+2,gmeditec.jpeg,Development of A Surgical Navigation System Using 3D Slicer,2021.06 - 2022.01,GMeditec,
+2,nrf.jpeg,Automatic Transfer Function Generation for Direct Volume Rendering using Knowledge Database and Contents-based Retrieval,2020.09 - 2021.08,National Research Foundation of Korea,Starting Grant (생애첫연구)
+3,uos.png,Professor Emeritus,Dagan Feng,"School of Computer Science, The University of Sydney, Australia.",
+3,rpa.jpg,Professor,Michael Fulham,"Department of Molecular Imaging, Royal Prince Alfred, Australia.",
+3,uos.png,Professor,Jinman Kim,"School of Computer Science, The University of Sydney, Australia.",
+3,shanghai_jiaotong.png,Associate Professor,Lei Bi,"Institute of Translational Medicine, Shanghai Jiao Tong University, China.",
+3,jamescook.jpg,,Euijoon Ahn,"College of Science and Engineering, James Cook University, Australia.",
+3,shanghai_jiaotong.png,Associate Professor,Bin Sheng,"Department of Computer Science and Engineering, Shanghai Jiao Tong University, China.  ",
+3,hongkongpolytech.png,Assistant Professor,Li Ping,"Department of Computing, The Hong Kong Polytechnic University, Hong Kong.  ",
+3,gilmedi.png,Professor,Seon-Tae Kim,"Department of Otolaryngology-Head and Neck Surgery, College of Medicine, Gachon University, Gil Medical Center, Korea. ",
+3,gilmedi.png,Professor,Eun Young Kim,"Department of Radiology, College of Medicine, Gachon University, Gil Medical Center, Korea.",
+3,gilmedi.png,Associate Professor,Seong Son,"Department of Neurosurgery, College of Medicine, Gachon University, Gil Medical Center, Korea.",
+3,mokponationaluniv.png,Assistant Professor,Sang-wan Jeon,"Department of Physical Education, Mokpo National University, Korea.",
+3,seokyeong.jpg,Professor,Al Chan Kim,"Department of Sports and Technology, Seo Kyeong University, Korea.",
+3,kuah.png,Assistant Professor,Jiwon Park,"Department of Orthopaedic Surgery, Korea University Ansan Hospital, Korea.",
+3,tu.png,Dr,Zeyang Zhou,"School of Mechanical Engineering, Tianjin University, China.",

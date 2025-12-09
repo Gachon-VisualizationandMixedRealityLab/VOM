@@ -1,0 +1,137 @@
+/* =========================================
+   VOM Lab - Publications Page Styles
+   ========================================= */
+
+/* =========================================
+   1. Year Separator
+   ========================================= */
+.year-separator {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 60px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--text-primary);
+    color: var(--text-primary);
+}
+
+.year-block:first-of-type .year-separator {
+    margin-top: 0;
+}
+
+/* =========================================
+   2. Publication Item
+   ========================================= */
+.pub-item {
+    display: flex;
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.pub-item:hover {
+    background-color: #fafafa;
+}
+
+/* Content */
+.pub-content { 
+    flex: 1; 
+}
+
+.pub-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.pub-title a:hover {
+    color: var(--accent-color);
+}
+
+.pub-authors {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+/* Author highlight */
+.author-me {
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 2px;
+}
+
+/* Meta info */
+.pub-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.venue-tag {
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.venue-tag.journal {
+    background-color: var(--tag-journal-bg);
+    color: var(--tag-journal-text);
+}
+
+.venue-tag.book {
+    background-color: #f3e8ff;
+    color: #7c3aed;
+}
+
+/* Resource links */
+.resource-links a {
+    font-size: 0.85rem;
+    margin-right: 15px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.resource-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* =========================================
+   3. Responsive
+   ========================================= */
+@media (max-width: 768px) {
+    .pub-item { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .pub-title {
+        font-size: 1.05rem;
+    }
+    
+    .year-separator {
+        font-size: 1.3rem;
+        margin: 40px 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pub-meta {
+        gap: 10px;
+    }
+    
+    .resource-links a {
+        margin-right: 10px;
+    }
+}

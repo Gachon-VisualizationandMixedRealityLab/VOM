@@ -1,357 +1,146 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
-  <meta http-equiv="Expires" content="-1">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Cache-Control" content="no-cache">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-    rel="stylesheet">
-
-  <title>VOM-Lab hompage</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-
-
-  <!-- Custom CSS to manage tab visibility and pagination -->
-  <style>
-    .tab_1,
-    .tab_2,
-    .tab_3 {
-      display: none;
-      /* 기본적으로 모든 탭 내용을 숨김 */
-    }
-
-    .tab_1.active,
-    .tab_2.active,
-    .tab_3.active {
-      display: block;
-      /* 활성화된 탭만 표시 */
-    }
-
-    .filters ul li {
-      cursor: pointer;
-      display: inline-block;
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      margin-right: 5px;
-    }
-
-    .filters ul li.active {
-      background-color: #ddd;
-    }
-
-    .filter-list {
-      display: flex;
-      /* Flexbox 사용 */
-      justify-content: space-between;
-      /* 항목 사이의 공간을 균등하게 */
-      list-style-type: none;
-      /* 기본 목록 스타일 제거 */
-      padding: 0;
-    }
-
-    .filter-list li {
-      flex: 1;
-      /* 각 항목을 동일한 비율로 나눔 */
-      text-align: center;
-      /* 가운데 정렬 */
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      margin-right: 5px;
-      cursor: pointer;
-      transition: color 0.3s ease;
-      /* 글씨색 전환 효과 */
-      outline: none;
-      /* 버튼의 아웃라인 제거 */
-      color: #000;
-      /* 기본 글씨 색 검정 */
-    }
-
-    .filter-list li:last-child {
-      margin-right: 0;
-      /* 마지막 항목에 마진 제거 */
-    }
-
-    .filter-list li:hover {
-      color: #2C3E50;
-      /* 마우스 오버 시 글씨 색 변경 (짙은 남색) */
-    }
-
-    .filter-list li.active {
-      color: #2C3E50;
-      /* 활성화된 탭 글씨 색 (짙은 남색) */
-      font-weight: bold;
-      /* 글씨 굵게 */
-    }
-
-    .filter-list li:focus {
-      outline: none;
-      /* 포커스 시 아웃라인 제거 */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | VOM Lab</title>
     
-    /* 페이지네이션 스타일 */
-    .pagination-container {
-      display: flex;
-      justify-content: center;
-      margin: 30px 0;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    .pagination {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .page-item {
-      margin: 0 5px;
-    }
-    
-    .page-link {
-      display: block;
-      padding: 8px 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      color: #333;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    
-    .page-item.active .page-link {
-      background-color: #2C3E50;
-      color: white;
-      border-color: #2C3E50;
-    }
-    
-    .page-item.disabled .page-link {
-      color: #aaa;
-      pointer-events: none;
-      cursor: default;
-    }
-    
-    .page-link:hover {
-      background-color: #f5f5f5;
-    }
-  </style>
-
-
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/members.css">
+    <link rel="stylesheet" href="css/research.css">
 </head>
+<body class="research-page">
 
-<body onload="loaded();">
-  <!-- Header -->
-  <header class="">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <h2>VOM <em>Lab</em></h2>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="member.html">Members</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="research.html">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="publications.html">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="grant.html">Grant</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="demo.html">Demo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-          </ul>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">VOM <span>Lab</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="members.html">Members</a>
+                <a href="research.html" class="active">Research</a>
+                <a href="publications.html">Publications</a>
+                <a href="grants.html">Grants</a>
+                <a href="demo.html">Demo</a>
+                <a href="gallery.html">Gallery</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <!-- Research Section -->
-  <div class="research">
-    <div class="heading">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Page Header -->
+        <div class="container page-header">
+            <h1 class="page-title">Research</h1>
+        </div>
 
-            <h1>Research</h1>
-            <div class="line"></div>
-            <div class="filters">
-              <ul class="filter-list">
-                <li class="tab_1 active" onclick="showTab('tab_1')">Visualization & Mixed Reality</li>
-                <li class="tab_2" onclick="showTab('tab_2')">Image Process & Machine Learning</li>
-                <li class="tab_3" onclick="showTab('tab_3')">Domain Applications</li>
-              </ul>
+        <!-- Tab Navigation -->
+        <div class="container">
+            <div class="member-tabs">
+                <button class="tab-btn active" data-tab="visualization">Visualization & Mixed Reality</button>
+                <button class="tab-btn" data-tab="imageprocess">Image Processing & Machine Learning</button>
+                <button class="tab-btn" data-tab="domain">Domain Applications</button>
             </div>
-            
-            <div class="content">
+        </div>
 
-              <div class="col-md-12 tab_1 active">
-                <div class="container">
-                  <div class="col-md-12">
-                    <div class="big-section-heading">
-                      <h1>Visualization & Mixed Reality</h1>
-                    </div>
-                  </div>
-                </div>
-                <div id="research_1" class="subcontent">
-                  <!-- 컨텐츠가 여기에 로드됩니다 -->
-                </div>
-                <!-- 페이지네이션 컨트롤 추가 -->
-                <div id="pagination_1" class="pagination-container">
-                  <!-- 페이지네이션이 여기에 로드됩니다 -->
-                </div>
-              </div>
+        <!-- Tab Contents -->
+        <div class="tab-contents">
 
-              <div class="col-md-12 tab_2">
+            <!-- Visualization & Mixed Reality Tab -->
+            <div class="tab-content active" id="visualization">
                 <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="big-section-heading">
-                        <h1>Image Process & Machine Learning</h1>
-                      </div>
-                    </div>
-                  </div>
+                    <p class="loading-text" style="text-align: center; color: var(--text-secondary); padding: 60px 0;">Loading...</p>
                 </div>
-                <div id="research_2" class="subcontent">
-                  <!-- 컨텐츠가 여기에 로드됩니다 -->
-                </div>
-                <!-- 페이지네이션 컨트롤 추가 -->
-                <div id="pagination_2" class="pagination-container">
-                  <!-- 페이지네이션이 여기에 로드됩니다 -->
-                </div>
-              </div>
-
-              <div class="col-md-12 tab_3">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="big-section-heading">
-                        <h1>Domain Applications</h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div id="research_3" class="subcontent">
-                  <!-- 컨텐츠가 여기에 로드됩니다 -->
-                </div>
-                <!-- 페이지네이션 컨트롤 추가 -->
-                <div id="pagination_3" class="pagination-container">
-                  <!-- 페이지네이션이 여기에 로드됩니다 -->
-                </div>
-              </div>
             </div>
 
-          </div>
+            <!-- Image Processing & Machine Learning Tab -->
+            <div class="tab-content" id="imageprocess">
+                <div class="container">
+                    <p class="loading-text" style="text-align: center; color: var(--text-secondary); padding: 60px 0;">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Domain Applications Tab -->
+            <div class="tab-content" id="domain">
+                <div class="container">
+                    <p class="loading-text" style="text-align: center; color: var(--text-secondary); padding: 60px 0;">Loading...</p>
+                </div>
+            </div>
+
         </div>
-      </div>
-    </div>
-  </div>
 
+    </main>
 
-  <!-- footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="inner-content">
-            <p>&copy; 2023 Visualization of Mixed Reality Laboratory
-              <br> School of Computing, Gachon University, 1342 Seongnamdaero, Sujeonggu, Seongnam, Gyeonggido
-              13120, Republic of Korea, Korea
-              <br>Tel. (+82) 31-750-4771
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Visualization of Mixed Reality & Medical Image Laboratory.<br>
+                All rights reserved.
             </p>
-          </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-  <!-- Additional Scripts -->
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/owl.js"></script>
-  <script src="assets/js/slick.js"></script>
-  <script src="assets/js/isotope.js"></script>
-  <script src="assets/js/accordions.js"></script>
-  <script src="assets/js/forCSV/research.js"></script>
-
-
-  <script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) { //declaring the array outside of the
-      if (!cleared[t.id]) { // function makes it static and global
-        cleared[t.id] = 1; // you could use true and false, but that's more typing
-        t.value = ''; // with more chance of typos
-        t.style.color = '#fff';
-      }
-    }
-  </script>
-
-  <script>
-    // 탭 전환 함수
-    function showTab(tab) {
-      // 모든 탭에서 active 클래스 제거
-      document.querySelectorAll('.filters ul li').forEach(function(el) {
-        el.classList.remove('active');
-      });
-
-      // 클릭한 탭에 active 클래스 추가
-      document.querySelector('.filters ul li.' + tab).classList.add('active');
-
-      // 모든 콘텐츠 숨기기
-      document.querySelectorAll('.content > .col-md-12').forEach(function(el) {
-        el.classList.remove('active');
-      });
-
-      // 선택된 콘텐츠만 표시
-      document.querySelector('.content .' + tab).classList.add('active');
-    }
-
-    // 페이지 로드 후 데이터 로드 및 탭 전환 설정
-    window.onload = function () {
-      // 먼저 research.js에서 데이터를 로드
-      loaded();
-
-      // 데이터가 로드된 후에 탭 전환을 설정
-      setTimeout(function () {
-        showTab('tab_1'); // 첫 번째 탭을 기본으로 표시
-      }, 1000); // 데이터를 로드하는 데 시간이 필요할 수 있으므로 1초 지연
-    };
-  </script>
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="assets/csv_js/research.js"></script>
+    
+    <!-- Tab Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            if (!tabButtons.length || !tabContents.length) return;
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Remove active class from all contents
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Add active class to target content
+                    const targetContent = document.getElementById(targetTab);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                    
+                    // Reset pagination to page 1 for this tab
+                    if (typeof resetTabPage === 'function') {
+                        resetTabPage(targetTab);
+                    }
+                });
+            });
+            
+            // Handle URL hash for direct linking
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                const targetButton = document.querySelector(`[data-tab="${hash}"]`);
+                if (targetButton) {
+                    targetButton.click();
+                }
+            }
+        });
+    </script>
 
 </body>
-
 </html>

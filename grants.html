@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | VOM Lab</title>
+    <title>Grants | VOM Lab</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/members.css">
-    <link rel="stylesheet" href="css/publications.css">
+    <link rel="stylesheet" href="css/grants.css">
 </head>
 <body>
 
@@ -25,8 +25,8 @@
                 <a href="index.html">Home</a>
                 <a href="members.html">Members</a>
                 <a href="research.html">Research</a>
-                <a href="publications.html" class="active">Publications</a>
-                <a href="grants.html">Grants</a>
+                <a href="publications.html">Publications</a>
+                <a href="grants.html" class="active">Grants</a>
                 <a href="demo.html">Demo</a>
                 <a href="gallery.html">Gallery</a>
             </nav>
@@ -39,43 +39,59 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container">
+    <main>
+        
         <!-- Page Header -->
-        <div class="page-header">
-            <h1 class="page-title">Publications</h1>
-            <!-- <p class="page-desc">
-                Selected research papers and journals.<br>
-                (* indicates equal contribution)
-            </p> -->
+        <div class="container page-header">
+            <h1 class="page-title">Grants & Collaborations</h1>
+
         </div>
 
         <!-- Tab Navigation -->
         <div class="container">
             <div class="member-tabs">
-                <button class="tab-btn active" data-tab="journals">International Journals</button>
-                <button class="tab-btn" data-tab="conferences">International Conference</button>
-                <button class="tab-btn" data-tab="books">Books</button>
+                <button class="tab-btn active" data-tab="grants">Grants</button>
+                <button class="tab-btn" data-tab="collaborations">Collaborations</button>
             </div>
         </div>
 
+        <!-- Tab Contents -->
+        <div class="tab-contents">
 
+            <!-- Grants Tab -->
+            <div class="tab-content active" id="grants">
+                <div class="container">
+                    <!-- Active Projects -->
+                    <h2 class="grants-section-label">Active Projects</h2>
+                    <ul class="grant-list" id="active-projects">
+                        
 
-        <!-- 2024 Publications -->
-        <div class="tab-content active" id="journals">
+                    </ul>
 
+                    <!-- Completed Projects -->
+                    <h2 class="grants-section-label completed">Completed Projects</h2>
+                    <ul class="grant-list completed" id="completed-projects">
 
+                    </ul>
+                </div>
+            </div>
 
-        </div>
-
-
-        <div class="tab-content" id="conferences">
+            <!-- Collaborations Tab -->
+            <div class="tab-content" id="collaborations">
                 
+                <!-- Research Collaborators -->
+                <section class="collaborator-section">
+                    <div class="container">
+                        <h3 class="collaborator-section-label">Research Collaborators</h3>
+                        <div class="collaborator-grid" id="Collaboration">
+                            
 
-        </div>
+                            <!-- Add more collaborator cards here -->
+                            
+                        </div>
+                    </div>
+                </section>
 
-            <!-- Books Tab -->
-            <div class="tab-content" id="books">
-                
 
             </div>
 
@@ -95,8 +111,7 @@
     <!-- Scripts -->
     <script src="js/common.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="assets/csv_js/publications.js"></script>
-
+    <script src="assets/csv_js/grant.js"></script>
     
     <!-- Tab Script -->
     <script>
@@ -137,8 +152,6 @@
             }
         });
     </script>
-
-
 
 </body>
 </html>
